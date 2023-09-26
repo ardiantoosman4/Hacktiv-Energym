@@ -32,6 +32,12 @@ nav .content .links{
   font-size: 30px;
   font-weight: 600;
 }
+.content .logo img{
+  border-radius: 4px;
+  padding: 5px;
+  width: 120px;
+  
+}
 .content .links li{
   list-style: none;
   line-height: 70px;

@@ -5,7 +5,7 @@
 body {
   padding-top: 3rem;
   padding-bottom: 3rem;
-  color: #5a5a5a;
+  color: white;
 }
 
 
@@ -13,6 +13,9 @@ body {
 -------------------------------------------------- */
 
 /* Carousel base class */
+.bg-color {
+  background-color: #171c24;
+}
 .carousel {
   margin-bottom: 4rem;
 }
@@ -31,7 +34,7 @@ body {
   top: 0;
   left: 0;
   min-width: 100%;
-  height: 32rem;
+  height: 800px;
 }
 
 
@@ -39,6 +42,19 @@ body {
 -------------------------------------------------- */
 
 /* Center align the text within the three columns below the carousel */
+.container-pt {
+  display: flex;
+  justify-content: center;
+}
+
+.margin-top {
+  margin-top: 5%;
+}
+
+.margin-bot {
+  margin-bottom: 5%;
+}
+
 .marketing .col-lg-4 {
   margin-bottom: 1.5rem;
   text-align: center;
@@ -50,6 +66,13 @@ body {
 .marketing .col-lg-4 p {
   margin-right: .75rem;
   margin-left: .75rem;
+}
+
+.text-bg-trainer {
+  background-color: #00BF63;
+  display: inline;
+  border-radius: 6%;
+  padding: 7px;
 }
 /* rtl:end:ignore */
 

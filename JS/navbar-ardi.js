@@ -184,13 +184,19 @@ function listenSubmitRegister() {
     if (!oldInputPass) {
       oldInputPass = [];
     }
+    let oldInputMembership = JSON.parse(localStorage.getItem("membership"));
+    if (!oldInputMembership) {
+      oldInputMembership = [];
+    }
     oldInputEmail.push(inputEmail);
     oldInputPass.push(inputPass);
+    oldInputMembership.push("Not a Member");
     let newEmail = JSON.stringify(oldInputEmail);
     let newPass = JSON.stringify(oldInputPass);
+    let newMembership = JSON.stringify(oldInputMembership);
     localStorage.setItem("email", newEmail);
     localStorage.setItem("password", newPass);
-
+    localStorage.setItem("membership", newMembership);
     let divContainer = document.getElementById("pop-up-register");
     divContainer.classList.toggle("display-register-container");
   });

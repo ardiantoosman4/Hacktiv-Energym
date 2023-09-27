@@ -7,14 +7,12 @@ body {
   padding-bottom: 3rem;
   color: white;
 }
-
-
 /* CUSTOMIZE THE CAROUSEL
 -------------------------------------------------- */
 
 /* Carousel base class */
 .bg-color {
-  background-color: #171c24;
+  background-color: #141412;
 }
 .carousel {
   margin-bottom: 4rem;
@@ -46,6 +44,24 @@ body {
   position: relative;
 }
 
+.bg-item-1 {
+  background-image: url("../img/bg-1.png");
+  height: 1000px;
+  width: auto;
+  margin-top: 5%;
+  background-position:center;
+  background-repeat: no-repeat;
+  background-size:cover;
+  position: relative;
+}
+
+.container-about-us {
+  height: 500px;
+  width: auto;
+  padding-top: 18%;
+  padding-left: 10%;
+  padding-right: 60%;
+}
 
 /* MARKETING CONTENT
 -------------------------------------------------- */
@@ -78,18 +94,53 @@ body {
 }
 /* rtl:begin:ignore */
 .marketing .col-lg-4 p {
-  margin-right: .75rem;
-  margin-left: .75rem;
+  margin-right: 0.75rem;
+  margin-left: 0.75rem;
 }
 
 .text-bg-trainer {
-  background-color: #00BF63;
+  background-color: #00bf63;
   display: inline;
   border-radius: 6%;
   padding: 7px;
 }
-/* rtl:end:ignore */
 
+.text-contact-us {
+  text-align: center;
+  margin-bottom: 15px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.footer {
+  text-align: center;
+  font-family: "Bree Serif", serif;
+  font-size: 18px;
+}
+
+.img-icon:hover {
+  opacity: 0.7;
+}
+
+#square-contact-us {
+  width: 400px;
+  height: auto;
+  background-color: grey;
+  opacity: 50%;
+  margin: 10px auto;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+#square-about-us {
+  width: 400px;
+  height: auto;
+  background-color: grey;
+  opacity: 50%;
+  margin: 10px auto;
+  padding: 15px;
+  border-radius: 10px;
+}
+/* rtl:end:ignore */
 
 /* Featurettes
 ------------------------- */
@@ -103,9 +154,8 @@ body {
   font-weight: 300;
   line-height: 1;
   /* rtl:remove */
-  letter-spacing: -.05rem;
+  letter-spacing: -0.05rem;
 }
-
 
 /* RESPONSIVE CSS
 -------------------------------------------------- */

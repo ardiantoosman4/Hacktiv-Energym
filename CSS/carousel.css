@@ -58,7 +58,7 @@ body {
 .container-about-us {
   height: 500px;
   width: auto;
-  padding-top: 18%;
+  padding-top: 14%;
   padding-left: 10%;
   padding-right: 60%;
 }
@@ -122,16 +122,6 @@ body {
 }
 
 #square-contact-us {
-  width: 400px;
-  height: auto;
-  background-color: grey;
-  opacity: 50%;
-  margin: 10px auto;
-  padding: 15px;
-  border-radius: 10px;
-}
-
-#square-about-us {
   width: 400px;
   height: auto;
   background-color: grey;

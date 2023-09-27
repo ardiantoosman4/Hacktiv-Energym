@@ -4,7 +4,26 @@
 // localStorage.setItem("isLogin", false);
 // localStorage.setItem("isLogin", null);
 // #########################################
-changeNavbar();
+generateNavbar();
+
+function generateNavbar() {
+  let divNavbar = document.getElementById("navbar-from-js");
+
+  divNavbar.innerHTML = `
+                        <nav>
+                          <div class="navbar-content">
+                          <div class="navbar-logo"><a href="#"><img src="../img/logo.png" alt="Energym"></a></div>
+                            <ul class="navbar-links">
+                              <li><a href="#">Testimony</a></li>
+                              <li><a href="#">About Us</a></li>
+                              <li><a href="#">Membership</a></li>
+                              <li id = "variable-link"></li>
+                            </ul>
+                          </div>
+                        </nav>
+                        `;
+  changeNavbar();
+}
 
 function changeNavbar() {
   let liDynamic = document.getElementById("variable-link");
@@ -18,7 +37,7 @@ function changeNavbar() {
     listenLogout();
   } else {
     localStorage.setItem("isLogin", false);
-    liDynamic.innerHTML = `<a href="#" id = "open-pop-up-login">Login</a>`;
+    liDynamic.innerHTML = `<a id = "open-pop-up-login">Login</a>`;
     generatePopUpLogin();
     generatePopUpRegister();
     listenOpenLogin();
@@ -51,7 +70,7 @@ function generatePopUpLogin() {
                                 <button type="submit" id="submit-login">login</button>
                                 </div>
                                 <div class="signup-link">
-                                Don't have an account? <a href="#" id = "open-pop-up-register">Register now</a>
+                                Don't have an account? <a style="color:green" id = "open-pop-up-register">Register now</a>
                                 </div>
                             </form> `;
 }
@@ -110,6 +129,13 @@ function listenOpenRegister() {
       let divContainerLogin = document.getElementById("pop-up-login");
       divContainerLogin.classList.toggle("display-login-container");
 
+      let divContainer = document.getElementById("pop-up-register");
+      divContainer.classList.toggle("display-register-container");
+    });
+  }
+  let btnRegister = document.getElementById("carousel-signup");
+  if (btnRegister) {
+    btnRegister.addEventListener("click", function () {
       let divContainer = document.getElementById("pop-up-register");
       divContainer.classList.toggle("display-register-container");
     });

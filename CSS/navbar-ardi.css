@@ -5,12 +5,14 @@
   text-decoration: none;
   font-family: sans-serif;
 }
-.wrapper{
+.navbar-wrapper{
   background: #171c24;
   position: fixed;
   width: 100%;
+  box-sizing: border-box;
+  z-index: 9999;
 }
-.wrapper nav{
+.navbar-wrapper nav{
   position: relative;
   display: flex;
   max-width: calc(100% - 200px);
@@ -19,31 +21,31 @@
   align-items: center;
   justify-content: space-between;
 }
-nav .content{
+nav .navbar-content{
   display: flex;
   align-items: center;
 }
-nav .content .links{
+nav .navbar-content .navbar-links{
   margin-left: 80px;
   display: flex;
 }
-.content .logo a{
+.navbar-content .navbar-logo a{
   color: #fff;
   font-size: 30px;
   font-weight: 600;
 }
-.content .logo img{
+.navbar-content .navbar-logo img{
   border-radius: 4px;
   padding: 5px;
   width: 120px;
   
 }
-.content .links li{
+.navbar-content .navbar-links li{
   list-style: none;
   line-height: 70px;
 }
-.content .links li a,
-.content .links li label{
+.navbar-content .navbar-links li a,
+.navbar-content .navbar-links li label{
   color: #fff;
   font-size: 18px;
   font-weight: 500;
@@ -51,16 +53,16 @@ nav .content .links{
   border-radius: 5px;
   transition: all 0.3s ease;
 }
-.content .links li label{
+.navbar-content .navbar-links li label{
   display: none;
 }
-.content .links li a:hover,
-.content .links li label:hover{
+.navbar-content .navbar-links li a:hover,
+.navbar-content .navbar-links li label:hover{
   background: #323c4e;
 }
 
 /* Dropdown Menu code start */
-.content .links ul{
+.navbar-content .navbar-links ul{
   position: absolute;
   background: #171c24;
   top: 80px;
@@ -68,26 +70,26 @@ nav .content .links{
   opacity: 0;
   visibility: hidden;
 }
-.content .links li:hover > ul{
+.navbar-content .navbar-links li:hover > ul{
   top: 70px;
   opacity: 1;
   visibility: visible;
   transition: all 0.3s ease;
 }
-.content .links ul li a{
+.navbar-content .navbar-links ul li a{
   display: block;
   width: 100%;
   line-height: 30px;
   border-radius: 0px!important;
 }
-.content .links ul ul{
+.navbar-content .navbar-links ul ul{
   position: absolute;
   top: 0;
   right: calc(-100% + 8px);
 }
-.content .links ul li{
+.navbar-content .navbar-links ul li{
   position: relative;
 }
-.content .links ul li:hover ul{
+.navbar-content .navbar-links ul li:hover ul{
   top: 0;
 }

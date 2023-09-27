@@ -37,10 +37,20 @@
 
     <!-- Custom styles for this template -->
     <link href="../CSS/carousel.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../CSS/navbar-ardi.css">
+    <link rel="stylesheet" href="../CSS/login-ardi.css">
+    <link rel="stylesheet" href="../CSS/register-ardi.css">
   </head>
-  <body class="bg-color bg-item">
-    <main>
-      <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+
+  <body class="bg-color bg-item"style="padding: 0;margin: 0;">
+    <!-- NAVBAR -->
+    <div class="navbar-wrapper" id="navbar-from-js"></div>
+    <div class="login-container" id="pop-up-login"></div>
+    <div class="register-container" id="pop-up-register"> </div>
+    
+    <!-- NAVBAR END HERE -->
+    <main >
+      <div id="myCarousel" class="carousel slide" data-bs-ride="carousel" style="top:75px">
         <div class="carousel-indicators">
           <button
             type="button"
@@ -75,14 +85,14 @@
               focusable="false"
             >
               <rect width="100%" height="100%" fill="#777" /></svg><img src="../img/slide-1.png" />
-
+  
             <div class="container">
               <div class="carousel-caption text-start">
                 <h2>get more out of your</h2>
                 <h1><b>Fitness Journey</b></h1>
                 <p>Join the community to track your progress.</p>
                 <p>
-                  <a class="btn btn-lg btn-success" href="#">Sign up today</a>
+                  <a class="btn btn-lg btn-success" id="carousel-signup">Sign up today</a>
                 </p>
               </div>
             </div>
@@ -98,7 +108,7 @@
               focusable="false"
             >
               <rect width="100%" height="100%" fill="#777" /></svg><img src="../img/slide-2.png" />
-
+  
             <div class="container">
               <div class="carousel-caption text-start">
                 <h1>
@@ -129,7 +139,7 @@
               focusable="false"
             >
               <rect width="100%" height="100%" fill="#777" /></svg><img src="../img/slide-3.jpg" />
-
+  
             <div class="container">
               <div class="carousel-caption text-end">
                 <h1>Work hard, play hard, live well</h1>
@@ -162,9 +172,9 @@
           <span class="visually-hidden">Next</span>
         </button>
       </div>
-
+  
       <!-- START THE FEATURETTES -->
-
+  
       <div class="container marketing" class="bg-item">
         <div class="row featurette">
           <div class="col-md-7">
@@ -194,9 +204,9 @@
             </svg>
           </div>
         </div>
-
+  
         <hr class="featurette-divider" />
-
+  
         <div class="row featurette">
           <div class="col-md-7 order-md-2">
             <h2 class="featurette-heading">
@@ -226,9 +236,9 @@
             </svg>
           </div>
         </div>
-
+  
         <hr class="featurette-divider" />
-
+  
         <div class="row featurette">
           <div class="col-md-7">
             <h2 class="featurette-heading">
@@ -258,13 +268,13 @@
             </svg>
           </div>
         </div>
-
+  
         <!-- Testimony all customer
   ================================================== -->
         <!-- Wrap the rest of the page in another container to center all the content. -->
-
+  
         <hr class="featurette-divider" />
-
+  
         <!-- Three columns of text below the carousel -->
         <div class="row container-pt">
           <h1 class="text-center margin">OUR TESTIMONY</h1>
@@ -284,7 +294,7 @@
               <rect width="100%" height="100%" fill="#777" />
               <text x="50%" y="50%" fill="#777" dy=".3em">140x140</text>
             </svg>
-
+  
             <h2 class="margin-top">
               Name:
               <p class="text-bg-trainer">Ciki Komo</p>
@@ -310,7 +320,7 @@
               <rect width="100%" height="100%" fill="#777" />
               <text x="50%" y="50%" fill="#777" dy=".3em">140x140</text>
             </svg>
-
+  
             <h2 class="margin-top">
               Name:
               <p class="text-bg-trainer">Micin</p>
@@ -336,7 +346,7 @@
               <rect width="100%" height="100%" fill="#777" />
               <text x="50%" y="50%" fill="#777" dy=".3em">140x140</text>
             </svg>
-
+  
             <h2 class="margin-top">
               Name:
               <p class="text-bg-trainer">Suga</p>
@@ -362,7 +372,7 @@
               <rect width="100%" height="100%" fill="#777" />
               <text x="50%" y="50%" fill="#777" dy=".3em">140x140</text>
             </svg>
-
+  
             <h2 class="margin-top">
               Name:
               <p class="text-bg-trainer">Wa wa</p>
@@ -375,13 +385,13 @@
           <!-- /.col-lg-4 -->
         </div>
         <!-- /.row -->
-
+  
         <hr class="featurette-divider" />
-
+  
         <!-- /END THE FEATURETTES -->
       </div>
       <!-- /.container -->
-
+  
       <!-- FOOTER -->
       <footer class="container">
         <p class="float-end"><a href="#">Back to top</a></p>
@@ -390,7 +400,11 @@
         </p>
       </footer>
     </main>
-
+    
+    <!-- script navbar -->
+    <script src="../JS/navbar-ardi.js"></script>
+    <!--  -->
     <script src="../JS/bootstrap.bundle.min.js"></script>
+    
   </body>
 </html>

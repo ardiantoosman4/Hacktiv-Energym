@@ -25,9 +25,8 @@ body {
 }
 
 .container-edit-content{
-    display:flex
+    display: contents;
 }
-
 
 /* #profile-title {
     
@@ -41,13 +40,13 @@ body {
 .data-container {
     display: flex;
     flex-direction: row;
-    margin-top: 50px;
+    margin-top: 20px;
     margin-bottom: 50px;
     align-items: center;
     width: 100%;
     justify-content: space-between;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
     border: 1px solid;
     border-left: none;
     border-right: none;
@@ -61,13 +60,15 @@ body {
 }
 
 .btn {
-    width: 50px;
-    border-radius: 10px;
+    width: 60px;
+    height: 30px;
+    border-radius: 5px;
     background: white;
-    color: #01ad57;
+    color: black;
     padding: 2px;
 }
 
 .btn:hover {
-    background-color: black;
+    background-color: #01ad57;
+    color: white;
 }

@@ -71,7 +71,7 @@
     position: absolute;
     left: -100%;
     z-index: -1;
-    background: -webkit-linear-gradient(right, #56d8e4, #9f01ea, #56d8e4, #9f01ea);
+    background: -webkit-linear-gradient(right, #01ad57, #12486B, #01ad57, #12486B);
     transition: all 0.4s;
   }
   form .register-btn:hover .inner{

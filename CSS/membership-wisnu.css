@@ -76,5 +76,6 @@ div.parentElement{
 }
 
 .btn-order:hover {
-    background-color: black;
+    background-color: #01ad57;
+    color: white;
 }

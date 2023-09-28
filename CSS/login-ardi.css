@@ -107,6 +107,7 @@ form .signup-link{
 form .signup-link a{
   color: #3498db;
   text-decoration: none;
+  cursor: pointer;
 }
 form .signup-link a:hover{
   text-decoration: underline;

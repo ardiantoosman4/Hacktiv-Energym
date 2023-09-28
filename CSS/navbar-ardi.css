@@ -52,6 +52,7 @@ nav .navbar-content .navbar-links{
   padding: 9px 17px;
   border-radius: 5px;
   transition: all 0.3s ease;
+  cursor:pointer
 }
 .navbar-content .navbar-links li label{
   display: none;

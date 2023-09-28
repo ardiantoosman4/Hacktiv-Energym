@@ -5,11 +5,13 @@
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 9999;
+  border-radius: 10px;
+  color: #fff;
 }
 
 .login-container{
   display: none;
-  background: darkslateblue;
+  background: #171c24;
   width: 410px;
   padding: 30px;
   box-shadow: 0 0 8px rgba(0,0,0,0.1);

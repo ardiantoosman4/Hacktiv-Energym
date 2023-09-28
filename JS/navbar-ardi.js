@@ -12,11 +12,13 @@ function generateNavbar() {
   divNavbar.innerHTML = `
                         <nav>
                           <div class="navbar-content">
-                          <div class="navbar-logo"><a href="#"><img src="../img/logo.png" alt="Energym"></a></div>
+                          <div class="navbar-logo"><a href="main-page.html"><img src="../img/logo.png" alt="Energym"></a></div>
                             <ul class="navbar-links">
-                              <li><a href="#">Testimony</a></li>
-                              <li><a href="#">About Us</a></li>
-                              <li><a href="#">Membership</a></li>
+                              
+                              <li><a href="main-page.html#about-us-section">About Us</a></li>
+                              <li><a href="main-page.html#testimony-section">Testimony</a></li>
+                              <li><a href="main-page.html#content-section">Content</a></li>
+                              <li><a href="membership-wisnu.html">Membership</a></li>
                               <li id = "variable-link"></li>
                             </ul>
                           </div>
@@ -31,8 +33,8 @@ function changeNavbar() {
     liDynamic.innerHTML = `
                           <a href="#">Username</a>
                           <ul>
-                              <li><a href="#" id = "profile-user">My Profile</a></li>
-                              <li><a href="#" id = "logout-user">Logout</a></li>
+                              <li><a href="profile-page.html" id = "profile-user">My Profile</a></li>
+                              <li><a href="main-page.html" id = "logout-user">Logout</a></li>
                           </ul>`;
     listenLogout();
   } else {
@@ -56,7 +58,7 @@ function generatePopUpLogin() {
                             <div class="text">
                                 Login Form
                             </div>
-                            <form action="#">
+                            <form action="">
                                 <div class="login-data">
                                 <label>Email</label>
                                 <input type="email" id="login-email" required>
@@ -67,10 +69,10 @@ function generatePopUpLogin() {
                                 </div>
                                 <div class="login-btn">
                                 <div class="inner"></div>
-                                <button type="submit" id="submit-login">login</button>
+                                <button type="button" id="submit-login">login</button>
                                 </div>
                                 <div class="signup-link">
-                                Don't have an account? <a style="color:green" id = "open-pop-up-register">Register now</a>
+                                Don't have an account? <a style="color:lightgreen" id = "open-pop-up-register">Register now</a>
                                 </div>
                             </form> `;
 }
@@ -82,7 +84,7 @@ function generatePopUpRegister() {
                             <div class="text">
                                 Registration Form
                             </div>
-                            <form action="#">
+                            <form action="">
                                 <div class="register-data">
                                 <label>Email</label>
                                 <input type="email" id="register-email" required>
@@ -97,7 +99,7 @@ function generatePopUpRegister() {
                                 </div>
                                 <div class="register-btn">
                                 <div class="inner"></div>
-                                <button type="submit" id="submit-register">Register</button>
+                                <button type="button" id="submit-register">Register</button>
                                 </div>
                             </form> `;
 }
@@ -106,8 +108,12 @@ function listenOpenLogin() {
   let aLogin = document.getElementById("open-pop-up-login");
   if (aLogin) {
     aLogin.addEventListener("click", function () {
+      elem = document.getElementById("glass-login-register");
+      if (!elem.classList.contains("display-glass-container")) {
+        elem.classList.add("display-glass-container");
+      }
       let divContainer = document.getElementById("pop-up-login");
-      divContainer.classList.toggle("display-login-container");
+      divContainer.classList.add("display-login-container");
     });
   }
 }
@@ -116,8 +122,11 @@ function ListenCloseLogin() {
   let pCloseLogin = document.getElementById("login-close-btn");
   if (pCloseLogin) {
     pCloseLogin.addEventListener("click", function () {
+      let divGlass = document.getElementById("glass-login-register");
+      divGlass.classList.remove("display-glass-container");
+
       let divContainer = document.getElementById("pop-up-login");
-      divContainer.classList.toggle("display-login-container");
+      divContainer.classList.remove("display-login-container");
     });
   }
 }
@@ -126,18 +135,32 @@ function listenOpenRegister() {
   let aRegister = document.getElementById("open-pop-up-register");
   if (aRegister) {
     aRegister.addEventListener("click", function () {
+      elem = document.getElementById("glass-login-register");
+      if (!elem.classList.contains("display-glass-container")) {
+        elem.classList.add("display-glass-container");
+      }
+
       let divContainerLogin = document.getElementById("pop-up-login");
-      divContainerLogin.classList.toggle("display-login-container");
+      if (divContainerLogin.classList.contains("display-login-container")) {
+        divContainerLogin.classList.remove("display-login-container");
+      }
 
       let divContainer = document.getElementById("pop-up-register");
-      divContainer.classList.toggle("display-register-container");
+      divContainer.classList.add("display-register-container");
     });
   }
   let btnRegister = document.getElementById("carousel-signup");
   if (btnRegister) {
     btnRegister.addEventListener("click", function () {
+      elem = document.getElementById("glass-login-register");
+      if (!elem.classList.contains("display-glass-container")) {
+        elem.classList.add("display-glass-container");
+      }
+
       let divContainer = document.getElementById("pop-up-register");
-      divContainer.classList.toggle("display-register-container");
+      if (!divContainer.classList.contains("display-register-container")) {
+        divContainer.classList.add("display-register-container");
+      }
     });
   }
 }
@@ -146,8 +169,11 @@ function listenCloseRegister() {
   let pCloseRegister = document.getElementById("register-close-btn");
   if (pCloseRegister) {
     pCloseRegister.addEventListener("click", function () {
+      let divGlass = document.getElementById("glass-login-register");
+      divGlass.classList.remove("display-glass-container");
+
       let divContainer = document.getElementById("pop-up-register");
-      divContainer.classList.toggle("display-register-container");
+      divContainer.classList.remove("display-register-container");
     });
   }
 }
@@ -181,6 +207,8 @@ function listenSubmitLogin() {
       let divContainer = document.getElementById("pop-up-login");
       divContainer.classList.toggle("display-login-container");
       changeNavbar();
+      let divGlass = document.getElementById("glass-login-register");
+      divGlass.classList.remove("display-glass-container");
       window.location.reload();
     } else {
       alert("Please check inputed email and password");
@@ -196,7 +224,14 @@ function listenSubmitRegister() {
     let inputPassConfirm = document.getElementById(
       "register-pass-confirm"
     ).value;
-
+    if (
+      inputEmail.length < 1 ||
+      inputPass.length < 1 ||
+      inputPassConfirm.length < 1
+    ) {
+      alert("Please fill all field");
+      return;
+    }
     if (inputPass !== inputPassConfirm) {
       alert("Password not match with password confirmation");
       return;
@@ -224,7 +259,9 @@ function listenSubmitRegister() {
     localStorage.setItem("password", newPass);
     localStorage.setItem("membership", newMembership);
     let divContainer = document.getElementById("pop-up-register");
-    divContainer.classList.toggle("display-register-container");
+    divContainer.classList.remove("display-register-container");
+    let divGlass = document.getElementById("glass-login-register");
+    divGlass.classList.remove("display-glass-container");
   });
 }
 

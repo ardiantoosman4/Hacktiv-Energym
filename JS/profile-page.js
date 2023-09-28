@@ -11,14 +11,14 @@ function generatePopUpEmail() {
                             <div class="text">
                                 Change Email Form
                             </div>
-                            <form action="#">
+                            <form action="">
                                 <div class="login-data">
                                 <label>Email</label>
                                 <input type="email" id="input-profile-change-email" required>
                                 </div>
                                 <div class="login-btn">
                                 <div class="inner"></div>
-                                <button type="submit" id="btn-profile-change-email">Change Email</button>
+                                <button type="button" id="btn-profile-change-email">Change Email</button>
                                 </div>
                             </form> `;
 }
@@ -30,7 +30,7 @@ function generatePopUpPassword() {
                             <div class="text">
                                 Change Email Form
                             </div>
-                            <form action="#">
+                            <form action="">
                                 <div class="login-data">
                                 <label>Old Password</label>
                                 <input type="password" id="input-profile-change-password" required>
@@ -45,7 +45,7 @@ function generatePopUpPassword() {
                                 </div>
                                 <div class="login-btn">
                                 <div class="inner"></div>
-                                <button type="submit" id="btn-profile-change-password">Change Password</button>
+                                <button type="button" id="btn-profile-change-password">Change Password</button>
                                 </div>
                             </form> `;
 }

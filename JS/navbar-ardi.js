@@ -31,7 +31,7 @@ function changeNavbar() {
   let liDynamic = document.getElementById("variable-link");
   if (localStorage.getItem("isLogin") === "true") {
     liDynamic.innerHTML = `
-                          <a href="#">Username</a>
+                          <a href="#">User-Menu</a>
                           <ul>
                               <li><a href="profile-page.html" id = "profile-user">My Profile</a></li>
                               <li><a href="main-page.html" id = "logout-user">Logout</a></li>

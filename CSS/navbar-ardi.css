@@ -26,7 +26,7 @@ nav .navbar-content{
   align-items: center;
 }
 nav .navbar-content .navbar-links{
-  margin-left: 80px;
+  margin-left: auto;
   display: flex;
 }
 .navbar-content .navbar-logo a{

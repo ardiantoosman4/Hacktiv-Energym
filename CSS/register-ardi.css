@@ -51,6 +51,7 @@
     padding-left: 10px;
     font-size: 17px;
     border: 1px solid silver;
+    border-radius: 10px;
   }
   form .register-data input:focus{
     border-color: #3498db;
@@ -62,6 +63,7 @@
     width: 100%;
     position: relative;
     overflow: hidden;
+    border-radius: 10px;
   }
   form .register-btn .inner{
     height: 100%;

@@ -200,7 +200,7 @@ function ListenEditMembership() {
   let editMembership = document.getElementById("btn-profile-membership");
   if (editMembership) {
     editMembership.addEventListener("click", function () {
-      window.location.href = "../HTML/membership-wisnu.html";
+      window.location.href = "membership-wisnu.html";
     });
   }
 }

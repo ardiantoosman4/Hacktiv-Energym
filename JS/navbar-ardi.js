@@ -12,12 +12,12 @@ function generateNavbar() {
   divNavbar.innerHTML = `
                         <nav>
                           <div class="navbar-content">
-                          <div class="navbar-logo"><a href="main-page.html"><img src="../img/logo.png" alt="Energym"></a></div>
+                          <div class="navbar-logo"><a href="index.html"><img src="img/logo.png" alt="Energym"></a></div>
                             <ul class="navbar-links">
                               
-                              <li><a href="main-page.html#about-us-section">About Us</a></li>
-                              <li><a href="main-page.html#testimony-section">Testimony</a></li>
-                              <li><a href="main-page.html#content-section">Content</a></li>
+                              <li><a href="index.html#about-us-section">About Us</a></li>
+                              <li><a href="index.html#testimony-section">Testimony</a></li>
+                              <li><a href="index.html#content-section">Content</a></li>
                               <li><a href="membership-wisnu.html">Membership</a></li>
                               <li id = "variable-link"></li>
                             </ul>
@@ -34,7 +34,7 @@ function changeNavbar() {
                           <a href="#">User-Menu</a>
                           <ul>
                               <li><a href="profile-page.html" id = "profile-user">My Profile</a></li>
-                              <li><a href="main-page.html" id = "logout-user">Logout</a></li>
+                              <li><a href="index.html" id = "logout-user">Logout</a></li>
                           </ul>`;
     listenLogout();
   } else {
